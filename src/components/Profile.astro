@@ -3,54 +3,126 @@ import { Picture } from 'astro:assets';
 import ProfilePicture from '../assets/profile.png';
 
 const profile = {
-    name: 'Lakshit Pant',
-    title: 'Community Copilot | Product Evangelist',
-    location: 'Bangalore, India',
-    description: `Developer communities? Scaled them.
-Stakeholder management? Done that on both startup speed and enterprise scale.
+    name: "shekhar@portfolio:~$",
+    displayName: "Shekhar Thathera",
+    title: "Community Builder | Product & Design Learner | Startup Operator",
+    location: "Delhi NCR, India",
+    status: "Connected to localhost",
+    description: `> executing identity.log...
 
-My journey been all about building programs that don’t just tick boxes—they move needles.
-From fellowships with Meta to scaling MVP programs at Microsoft—I’ve been at the heart of dev advocacy, mentorship, and ecosystem building.
+🚀 Building Startup4Nation — connecting sponsors with communities, colleges & startup ecosystems.
 
-I don’t just run initiatives - I architect ecosystems.`
+🎨 Designing experiences, brand assets, and workflows for programs, hackathons & developer communities.
+
+🤝 Worked with AWS Community NCR, GDG, GDSC, and SoarX — scaling engagement and visuals across events.
+
+💡 Motto: ship fast, learn publicly, iterate endlessly.
+`
 };
 ---
 
-<div class="flex flex-col gap-6 items-center text-center sm:items-start sm:text-left">
+<div class="terminal-container max-w-2xl w-full">
 
-    <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
-
-        <Picture
-            src={ProfilePicture}
-            formats={['webp']}
-            width={96}
-            height={96}
-            alt={'Profile picture ' + profile.name}
-            title={profile.name}
-            class="w-24 h-24 rounded-xl object-cover border-2 border-primary mx-auto sm:mx-0"
-        />
-
-        <div>
-
-            <h1 class="text-2xl font-extrabold mb-1 inline-block relative text-text-primary">
-                {profile.name}
-            </h1>
-
-            <p class="text-sm mb-2 text-primary">
-                {profile.title}
-            </p>
-
-            <p class="flex items-center justify-center sm:justify-start text-sm text-gray-400">
-                <svg class="-mt-0.5 inline mr-2"fill=none height=14 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 viewBox="0 0 24 24"width=14 xmlns=http://www.w3.org/2000/svg><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx=12 cy=10 r=3></circle></svg>
-                {profile.location}
-            </p>
-
-        </div>
-
+    <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">Terminal | Active Session</span>
     </div>
 
-    <p class="text-sm leading-relaxed mt-4 text-gray-400 whitespace-pre-line">
-        {profile.description}
-    </p>
+    <div class="terminal-body font-mono text-gray-300 space-y-4">
 
+        <!-- Command Block -->
+        <div>
+            <p class="text-green-400">{profile.name} <span class="text-white">whoami</span></p>
+            <p class="ml-6 text-purple-400">{profile.displayName}</p>
+        </div>
+
+        <!-- Photo -->
+        <div class="flex justify-center sm:justify-start">
+            <Picture
+                src={ProfilePicture}
+                formats={['webp']}
+                width={110}
+                height={110}
+                alt={'Profile picture ' + profile.displayName}
+                class="rounded-lg border border-green-500 shadow-[0_0_20px_rgba(0,255,120,0.4)]"
+            />
+        </div>
+
+        <!-- Role -->
+        <div>
+            <p class="text-green-400">{profile.name} <span class="text-white">role --get</span></p>
+            <p class="ml-6 text-blue-400">{profile.title}</p>
+        </div>
+
+        <!-- Location -->
+        <div>
+            <p class="text-green-400">{profile.name} <span class="text-white">whereami</span></p>
+            <p class="ml-6 text-yellow-300 flex items-center gap-2">
+                📍 {profile.location}
+            </p>
+        </div>
+
+        <!-- Bio -->
+        <div>
+            <p class="text-green-400">{profile.name} <span class="text-white">cat identity.log</span></p>
+            <p class="ml-6 whitespace-pre-line leading-relaxed text-gray-400">{profile.description}</p>
+        </div>
+
+        <!-- Status -->
+        <div>
+            <p class="text-green-400">{profile.name} <span class="text-white">system.status</span></p>
+            <p class="ml-6 text-sky-400">{profile.status}</p>
+        </div>
+
+        <!-- Fake blinking cursor -->
+        <div class="text-green-500 text-lg">
+            {profile.name} <span class="cursor-blink">█</span>
+        </div>
+    </div>
 </div>
+
+<style is:global>
+
+.terminal-container {
+    margin: auto;
+    background: #0c0f13;
+    border: 1px solid rgba(0,255,100,0.3);
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    background: #111417;
+    border-bottom: 1px solid rgba(0,255,100,0.2);
+    font-family: monospace;
+    font-size: .8rem;
+    color: #8effa8;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.dot.red { background: #ef4444; }
+.dot.yellow { background: #eab308; }
+.dot.green { background: #22c55e; }
+
+.cursor-blink {
+    animation: blink 1s infinite steps(2, start);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+</style>

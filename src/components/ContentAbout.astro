@@ -1,87 +1,205 @@
 ---
 import { Code } from 'astro:components';
-const code = `Flexing {
-    name: Lakshit Pant;
-    skills: Bluffing around;
-    interests: Community, Programs, Products, and People;
+
+const code = String.raw`// shekhar.dev :: profile.config
+
+Flexing {
+    name: "Shekhar Thathera";
+    handle: "shekhar_thathera";
+    title: "Community-led Builder & Designer";
+    currentRole: "Co-founder @ Startup4Nation";
+    location: "Delhi NCR / Greater Noida, India";
+    studying: "B.Tech CSE (AI), 2nd Year";
+    modes: ["Hacker", "Operator", "Designer"];
+    interests: ["Startups", "Hackathons", "Web3", "Cloud", "Bitcoin", "People"];
 };
 
 interface Stack {
-    devOps: Azure DevOps, GitHub Actions, Docker;
-    design: figma, Canva, Framer;
-    frontend: React, JavaScript, TailwindCSS, Astro;
-    CX: Program & People Management, Community & Stakeholder Management, Go-to-market Strategy, Social Media Planning, Blogging, User Experience (UX);
+    design: ["Figma", "Canva", "Framer (learning)"];
+    frontend: ["HTML", "CSS", "JavaScript", "React", "Next.js", "TailwindCSS"];
+    product: ["Wireframing", "Prototyping", "Landing Pages", "UX Thinking"];
+    community: [
+        "Program & People Management",
+        "Partnerships & Sponsorships",
+        "Event Ops & Logistics",
+        "Campus & Developer Communities"
+    ];
+    tools: ["Notion", "Discord", "WhatsApp Communities", "Google Workspace"];
 };
 
-// Experience
-const me: Program Manager, From: 'Apr'24 - July'25',
-    company: 'Microsoft', location: 'Bangalore', ,
-    achievements: [
-        • Led Gold Microsoft Learn Student Ambassadors Program in India,
-        • Managed Microsoft MVP & RD Program,
-        • Built developer partnerships & advocacy across India,
-        • Founded MVP Mentorship Circle,
-        • Supported Microsoft SmBs, Startups, MS Reactor, & stakeholders,
-    ],
-
-    
-const me: Technical Program Manager, From: 'Nov'21 - Mar'24',
-    company: 'Reskilll', location: 'Delhi',
-    achievements: [
-        • Microsoft Azure Dev Community from 30 to 150+ cities with 2M+ devs,
-        • Meta XR Fellowship, 100+ XR devs onboarded + 57+ XR open-source orgs,
-        • Delivered 200+ hackathons, 2x GTM targets,
-        • Managed flagship Microsoft programs, 40%+ engagement,
-        • Consulted 12+ enterprises, including Adobe, Intel, and more,
-    ],
+// Core Experience
+const me = {
+    role: "Co-founder";
+    org: "Startup4Nation";
+    from: "2024";
+    location: "NCR / Remote";
+    mission: "Connect sponsors with college, student & startup events.";
+    highlights: [
+        "Built a platform connecting sponsors and college/startup events.",
+        "Scaled community to 1K+ members across WhatsApp.",
+        "Hosted an event at Microsoft Office, Gurugram.",
+        "Handles partnerships, sponsor outreach & event operations end-to-end.",
+        "Designs decks, posters & flows so events feel smooth, not chaotic."
+    ];
 };
 
-// Contact function
-const contact = (type: ContactType): string => {
-    switch (type) {
-        case 'github':
-            return 'https://github.com/beingwizard';
-        case 'twitter':
-            return 'https://x.com/wizard_locks';
-        case 'linkedIn':
-            return 'https://www.linkedin.com/in/laxitpant';
-        case 'email':
-            return 'lakshitlucky1234@gmail.com';
-        default:
-            return 'Send fax.';
+const otherExperiences = [
+    {
+        role: "Designer & Community Builder";
+        org: "AWS User Group NCR";
+        impact: "Designed event creatives & helped with event ops (AWS Community Day NCR '24).";
+    },
+    {
+        role: "Graphic/UI Designer";
+        org: "GDSC On Campus + SoarX IIMT";
+        impact: "Handled community design, merch & event visual identity.";
     }
-};
+];
 
+// Projects
+const projects = [
+    "Portfolio (React + Next.js).",
+    "Real-time currency converter using market APIs.",
+    "Sponsor matchmaking workflow for Startup4Nation.",
+    "Multiple event designs for hackathons & tech communities."
+];
+
+// Contact function mock :)
+const contact = (platform) => {
+    return {
+        github: "https://github.com/YOUR_USERNAME",
+        twitter: "https://x.com/YOUR_USERNAME",
+        linkedin: "https://linkedin.com/in/YOUR_USERNAME",
+        email: "your@email.com",
+        whatsapp: "https://wa.me/91XXXXXXXXXX"
+    }[platform] ?? "Ping me on LinkedIn 🙂";
+};
 `;
 ---
 
-<Code
-    code={code}
-    lang="js"
-    wrap={true}
-/>
+<div class="terminal-wrapper max-w-3xl mx-auto">
+
+  <div class="terminal-header">
+    <div class="dots">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <span class="terminal-title">shekhar@portfolio: ~/profile.config</span>
+  </div>
+
+  <div class="terminal-body">
+    <Code
+      code={code}
+      lang="ts"
+      wrap={true}
+    />
+  </div>
+
+  <div class="terminal-footer">
+    <span>shekhar@portfolio</span>
+    <span class="dim">:: status=running :: mode=hacker+professional</span>
+  </div>
+
+</div>
 
 <style is:global>
+.terminal-wrapper {
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  margin-top: 2rem;
+}
 
-    /* Custom styling for code block line numbers */
-    pre.astro-code {
-        @apply bg-transparent !important;
-    }
+/* Header bar */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: 0.5rem 0.9rem;
+  background: #020617;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #e5e7eb;
+}
 
-    pre.astro-code code {
-        @apply block;
-        counter-reset: step;
-        counter-increment: step 0;
-    }
+.terminal-header .dots {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
 
-    pre.astro-code code .line {
-        @apply relative;
-    }
+.terminal-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
 
-    pre.astro-code code .line::before {
-        content: counter(step);
-        counter-increment: step;
-        @apply text-gray-600 pr-2;
-    }
+.terminal-header .dot.red { background: #ef4444; }
+.terminal-header .dot.yellow { background: #eab308; }
+.terminal-header .dot.green { background: #22c55e; }
 
+.terminal-title {
+  opacity: 0.8;
+}
+
+/* Body */
+.terminal-body {
+  padding: 1rem 1.25rem 1.25rem;
+  font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+/* Footer */
+.terminal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .4rem .9rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  background: #020617;
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.terminal-footer .dim {
+  opacity: 0.7;
+}
+
+/* Code block tweaks */
+pre.astro-code {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+pre.astro-code code {
+  display: block;
+  counter-reset: step;
+  counter-increment: step 0;
+  color: #e5e7eb;
+  line-height: 1.5;
+}
+
+/* line numbers */
+pre.astro-code code .line {
+  position: relative;
+  padding-left: 2.2rem;
+}
+
+pre.astro-code code .line::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: 0;
+  width: 1.6rem;
+  text-align: right;
+  opacity: 0.4;
+  font-size: 0.7rem;
+}
 </style>

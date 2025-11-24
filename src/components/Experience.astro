@@ -1,125 +1,183 @@
 ---
-import { Code } from "astro:components";
-const code = `Resume: {
-    name: Lakshit Pant;
-    native: Uttarakhand;
+import { Code } from 'astro:components';
+
+const code = String.raw`// booting shekhar.dev ...
+$ whoami
+> shekhar_thathera
+
+Resume: {
+    name: "Shekhar Thathera";
+    role: "Community-led Builder & Designer";
+    current: "Co-founder @ Startup4Nation";
+    location: "India (Delhi NCR / Greater Noida)";
+    studying: "B.Tech CSE (AI), 2nd Year";
+    interests: ["Startups", "Hackathons", "Web3", "Cloud", "Bitcoin", "Communities", "Design"];
 };
 
-Education: {
-    degree: B.Tech in Computer Science;     cgpa: 8.7;
-    institution: Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal;
-
-    degree: CMX People & Community MBA;
-    institution: CMX Academy;
-}
-
-
-// #1 Experience
-    company: 'Microsoft', location: 'Bangalore',
-    title: Program Manager, From: 'Apr'24 - July'25',
-    achievements: [
-        • Managing the Microsoft Learn Student Ambassadors program - 
-        leading Gold MLSA operations across India, driving AI,
-        agents, and Copilot advocacy; Prioritized developer engagement 
-        features based on telemetry and feedback, achieving a 60% YoY 
-        growth in FY25 metrics.
-
-        • Drove the Microsoft Most Valuable Professional (MVP) & Regional 
-        Director (RD) Program - oversaw 151 MVPs across 11
-        technical domains, coordinated event planning in sync with 
-        product roadmaps, delivered 172 events in FY25, and tracked a
-        170% increase in developer touch points.
-
-        • Built developer-focused partnerships across teams - Microsoft 
-        for Startups (+40% engagement), Microsoft SMB Team
-        (100% partner satisfaction), Microsoft Reactor 
-        (+80% product advocacy), and GitHub India (+3% Copilot usage
-        growth).
-
-],
-
-// #2Experience
-    company: 'Reskilll', location: 'Delhi',
-    title: Technical Program Manager, From: 'Nov'21 - Mar'24',
-        achievements: [
-            • Led the XR Open-Source Fellowship Program for Meta and the
-             Government of India - collaborated with internal engg. team Meta
-             product teams, onboarding 57 global XR startups and India’s 
-             top 100 XR developers from 10,000+ applicants for a 3-month 
-             open-source cohort.
-
-            • Executed curriculum development for 110+ institutions- prioritized 
-            learning features (Blender, JavaScript for AR) based on
-            dev feedback and sponsor goals, with 85+ expert sessions 
-            delivered- achieving 210% of Meta’s original goal
-
-            • Scaled the Azure Developer Community from 30 to 150+ cities - led 
-            agile-based program planning for 1,500+ online,
-            800+ offline events and 200+ hackathons, engaging 2M+ developers 
-            (FY’22–FY’24) with product GTM milestones.
-
-            • Drove Microsoft flagship programs including Season of AI, 
-            Code; Without Barriers and AI Tour 2024, managed the end-to-end
-            program lifecycle, collaborated with Bizz CX teams, prioritized 
-            feature demos, tracked deliverables, mitigated
-            outreach risks delivered 40% above target engagement(250k+ devs)
-
-            • Consulted 12+ enterprise clients (Microsoft, Adobe, Intel, 
-            FICCI)- built scalable developer program architectures, integrated
-            reporting and risk controls,  supported concurrent execution of 
-            10+ initiatives, and ensured delivery SLAs for 3M+
-            developers across India
-        ],
+// Stack & Skills
+Stack: {
+    design: ["Figma", "Canva", "Framer basics"];
+    frontend: ["HTML", "CSS", "JavaScript", "React", "Next.js", "TailwindCSS"];
+    product: ["Wireframing", "Prototyping", "UX Thinking", "Landing Pages"];
+    community: [
+        "Program & People Management",
+        "Sponsorships & Partnerships",
+        "Event Ops & Logistics",
+        "Campus & Developer Communities"
+    ];
+    tools: ["Notion", "Discord", "WhatsApp Communities", "Google Workspace"];
 };
 
-// Consulting Projects
-    #1 company: "ID8Nxt",
-    title: "Developer Program Consultant", projectname: 'Azure Blogathon'
-    skills enabled: ['MS Azure', 'Campaign Management', 'Developer Advocacy'],
+// Experience
+Experience_1: {
+    company: "Startup4Nation";
+    title: "Co-founder";
+    duration: "2024 - Present";
+    location: "NCR / Remote";
 
-        description: 'Led strategic consulting for a client during the Microsoft 
-        Azure Blogathon, formulating a social media campaign, community
-        outreach plan, and quality enablement sessions—directly contributing 
-        to the successful submission of 100 high-quality blogs
-        accepted by Microsoft within 15 days.',
+    highlights: [
+        "Building a bridge between sponsors and college/startup events.",
+        "Grew community to 1K+ members across WhatsApp.",
+        "Organised events at Microsoft Office, Gurugram.",
+        "Own end-to-end: partnerships, sponsor outreach, and on-ground execution.",
+        "Designs, decks, and workflows for smooth event operations."
+    ];
+};
 
-    #2 company: "PossoBuild",
-    title: "GTM Strategy", projectname: 'Smartprep by PossoBuild'
-    skills enabled: ['Product & GTM Strategy', 'Customer Journey Mapping',
-    'Lead Generation (B2B/B2C)', 'User Research'],
+Experience_2: {
+    orgs: ["AWS User Group NCR", "SoarX IIMT", "GDG on Campus IIMT", "Other tech communities"];
+    roles: ["Graphic Designer", "UI/UX Designer", "Community Volunteer"];
 
-        description: 
-        • Consulted a client on Go-To-Market (GTM) strategy 
-        for their B2C product — led end-to-end product enablement, including
-        launch planning, audience targeting, and growth strategy.
+    highlights: [
+        "Volunteer graphic designer for AWS Community Day Delhi NCR 2024.",
+        "Designed posters, banners, social creatives & event branding.",
+        "Helped with on-ground coordination & attendee experience.",
+        "Led design for SoarX IIMT events and T-shirt/merch concepts.",
+        "Core member at GDSC / GDG on campus, supporting tech + design."
+    ];
+};
 
-        • Built B2B product pipeline, defining outreach plans, content 
-        strategy, brand positioning, and feature prioritization based on
-        customer requirements and market feedback.,
+// Projects & Experiments
+Projects: [
+    "Personal portfolio (React + Next.js).",
+    "Currency converter app using real-time market values.",
+    "Event workflows & sponsor-matching processes for Startup4Nation.",
+    "Multiple hackathon/community design sets shipped under tight deadlines."
+];
+
+// Status & Contact
+Status: {
+    open_to: [
+        "Design & UI/UX roles",
+        "Community & Program Management",
+        "Startup collaborations",
+        "Freelance design & branding work"
+    ];
+    motto: "Build communities, design experiences, and keep shipping.";
+};
+
+Contact: {
+    github: "https://github.com/YOUR_GITHUB";
+    linkedin: "https://www.linkedin.com/in/YOUR_LINKEDIN";
+    twitter: "https://x.com/YOUR_TWITTER";
+    email: "your-email@example.com";
+    note: "Replace with your real links before shipping 🔧";
+};
 `;
+
 ---
 
-<Code code={code} lang="js" wrap={true} />
+<section class="terminal-wrapper">
+  <div class="terminal-header">
+    <div class="dot red"></div>
+    <div class="dot yellow"></div>
+    <div class="dot green"></div>
+    <span class="terminal-title">shekhar@portfolio: ~</span>
+  </div>
+
+  <div class="terminal-body">
+    <Code
+      code={code}
+      lang="ts"
+      wrap={true}
+    />
+  </div>
+</section>
 
 <style is:global>
-    /* Custom styling for code block line numbers */
-    pre.astro-code {
-        @apply bg-transparent !important;
-    }
+.terminal-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, #111827, #020617);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
 
-    pre.astro-code code {
-        @apply block;
-        counter-reset: step;
-        counter-increment: step 0;
-    }
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(to right, #020617, #020617);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.75rem;
+  color: #e5e7eb;
+}
 
-    pre.astro-code code .line {
-        @apply relative;
-    }
+.terminal-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
 
-    pre.astro-code code .line::before {
-        content: counter(step);
-        counter-increment: step;
-        @apply text-gray-600 pr-2;
-    }
-</style>
+.terminal-header .dot.red { background: #ef4444; }
+.terminal-header .dot.yellow { background: #facc15; }
+.terminal-header .dot.green { background: #22c55e; }
+
+.terminal-title {
+  margin-left: auto;
+  opacity: 0.75;
+}
+
+.terminal-body {
+  padding: 1rem 1.25rem 1.5rem;
+}
+
+/* Code block tweaks for hacker vibe */
+pre.astro-code {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+pre.astro-code code {
+  display: block;
+  counter-reset: step;
+  counter-increment: step 0;
+  font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Line numbers */
+pre.astro-code code .line {
+  position: relative;
+  padding-left: 2rem;
+}
+
+pre.astro-code code .line::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: 0;
+  width: 1.5rem;
+  text-align: right;
+  opacity: 0.4;
+}
+
+/* Text color */
+pre.astro-code code {
+  color: #e5e7eb;
+}</style>

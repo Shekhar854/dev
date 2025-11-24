@@ -1,211 +1,207 @@
 ---
-interface Speaking {
-    name: string;
-    description: string;
-    date: string;
-    tags?: string[];
-    link: {
-        url: string;
-        title?: string;
-    };
+type Speaking = {
+  name: string;
+  description: string;
+  date: string; // YYYY-MM-DD
+  tags?: string[];
+  link?: {
+    url: string;
+    title?: string;
+  };
 };
 
-const speaking: Speaking[] = [{
-    name: 'Linux Sprint Series',
-    description: 'Linux Commands & building a CRON job with Linux',
-    date: '2 Sept, 2023',
-    tags: ['linux', 'cron', 'cybersecurity'],
+const speaking: Speaking[] = [
+  {
+    name: 'AWS Community Day NCR 2024 – Design & Ops Insights',
+    description:
+      'Shared my experience as a volunteer designer & community builder — how we planned creatives, attendee journeys, and on-ground experience for AWS Community Day NCR 2024.',
+    date: '2024-09-21',
+    tags: ['aws', 'community', 'design', 'events'],
     link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_linux-cybersecurity-networkscanning-activity-7103335024619339776-98R0',
-        title: 'View Session'
-    }
-}, {
-    name: 'Crafting Git Series',
-    description: 'Getting started with Git',
-    date: '9 Sept 2023',
-    tags: ['git', 'version-control'],
+      url: 'https://www.linkedin.com/in/shekharthathera',
+      title: 'View Event Recap',
+    },
+  },
+  {
+    name: 'Startup4Nation – Sponsorship & Community Playbook',
+    description:
+      'Walked through how Startup4Nation connects sponsors with student communities & startup events, including outreach flows, event ops, and sponsor expectations.',
+    date: '2024-12-28',
+    tags: ['startup4nation', 'sponsorship', 'community'],
     link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_git-versioncontrol-softwaredevelopment-activity-7106265150176788481-t4aA',
-        title: 'View Session'
-    }
-}, {
-    name: 'HotPatch In Virtual Machines',
-    description: 'Securing your VMs & optimizing Azure VMs',
-    date: '28 Feb 2023',
-    tags: ['azure', 'virtual-machines', 'security'],
-    link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_hotpatching-is-a-new-way-to-install-updates-activity-7036254840280203264-0AEu',
-        title: 'View Session'
-    }
-}, {
-    name: 'Azure Learning Series',
-    description: 'Building foundations on Microsoft Azure',
-    date: '24 May 2023',
-    tags: ['azure', 'cloud', 'learning'],
-    link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_azurelearningseries-microsoftazure-cloudcomputing-activity-7066336235551625217-9GXX',
-        title: 'View Session'
-    }
-}, {
-    name: 'HackAIthon, Banasthali Vidyapeeth',
-    description: 'Hackathon best practices',
-    date: '20 Aug 2023',
-    tags: ['hackathon', 'ai', 'mentorship'],
-    link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_hackaithon-banasthalividyapeeth-ai-activity-7092829612539310081-h5Q8',
-        title: 'View Session'
-    }
-}, {
-    name: 'OSI Layers, and Usecases',
-    description: 'Networking: A world that runs everything',
-    date: '16 May 2022',
-    tags: ['networking', 'infrastructure'],
-    link: {
-        url: 'https://www.linkedin.com/posts/wizardlocks_community-networking-developer-activity-6931702739286536192-m4vI',
-        title: 'View Session'
-    }
-}, {
-    name: 'Azure Build Bootcamp, Ambala',
-    description: 'AZ 900 Bootcamp',
-    date: '11 Aug 2023',
-    tags: ['azure', 'certification', 'az-900'],
-    link: {
-        url: 'https://www.linkedin.com/feed/update/urn:li:activity:7095792054307368960',
-        title: 'View Session'
-    }
-}, {
-    name: 'Azure Learning Series',
-    description: 'Getting started with Microsoft Azure',
-    date: '21 May 2023',
-    tags: ['azure', 'cloud', 'learning'],
-    link: {
-        url: 'https://www.linkedin.com/feed/update/urn:li:activity:7063853513067421696',
-        title: 'View Session'
-    }
-}, {
-    name: 'Azure Developer Day, Hisar',
-    description: 'Getting started with Microsoft Azure',
-    date: '27 March 2023',
-    tags: ['azure', 'cloud', 'developer'],
-    link: {
-        url: 'https://www.linkedin.com/posts/wizardlocks_team-community-reskilll-activity-6999015974666428416-fbDw',
-        title: 'View Session'
-    }
-}, {
-    name: 'Azure Developer Day, Jammu',
-    description: '3C\'s of success- College, Cloud & Community',
-    date: '16 Oct 2022',
-    tags: ['azure', 'community', 'cloud'],
-    link: {
-        url: 'https://www.linkedin.com/feed/update/urn:li:activity:6987479430017245184',
-        title: 'View Session'
-    }
-}, {
-    name: 'Azure Spot Virtual Machines',
-    description: 'Cost optimization in Azure',
-    date: '3 June 2022',
-    tags: ['azure', 'virtual-machines', 'cost-optimization'],
-    link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_are-you-looking-for-ways-to-save-on-your-activity-7054619683718668288-nt6F',
-        title: 'View Session'
-    }
-}, {
-    name: 'Azure DevDay, Jamia',
-    description: 'AZ 900 Bootcamp',
-    date: '27 Mar 2023',
-    tags: ['azure', 'certification', 'az-900'],
-    link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_we-are-thrilled-to-announce-the-successful-activity-7046118860483092480-GOwd',
-        title: 'View Session'
-    }
-}, {
-    name: 'Building the Basics with Cloud',
-    description: 'Linux, networking, databases',
-    date: '31 Jan 2023',
-    tags: ['linux', 'networking', 'databases', 'cloud'],
-    link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_cloud-azure-learning-activity-7025818667967758336-CY_p',
-        title: 'View Session'
-    }
-}, {
-    name: 'Azure Virtual Machines',
-    description: 'Azure VMs',
-    date: '15 Jan 2023',
-    tags: ['azure', 'virtual-machines'],
-    link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_azure-virtualmachines-hotpatch-activity-7019668601297080320-oAj8',
-        title: 'View Session'
-    }
-}, {
-    name: 'Exposing Linux on Docker',
-    description: 'Docker',
-    date: '30 Sept 2023',
-    tags: ['linux', 'docker', 'containers'],
-    link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_discord-microsoftazure-azure-activity-6980855775543926784-mtnQ',
-        title: 'View Session'
-    }
-}, {
-    name: 'Azure VM',
-    description: 'Azure VMs',
-    date: '24 Sept 2023',
-    tags: ['azure', 'virtual-machines'],
-    link: {
-        url: 'https://www.linkedin.com/posts/azdevindia_azuredeveloper-azuredevops-discord-activity-6978604067279245313-ABD7',
-        title: 'View Session'
-    }
-}, {
-    name: ' More updating soon',
-    description: 'Updating sessions of 2024 & 2025 soon, busy in building a startup',
-    date: '1 Jan 2025',
+      url: 'https://www.linkedin.com/in/shekharthathera',
+      title: 'View Session',
+    },
+  },
+  {
+    name: 'More updating soon',
+    description:
+      'Updating sessions of 2024 & 2025 soon — currently busy building a startup, designing events, and breaking things in dev.',
+    date: '2025-01-01',
     tags: ['procrastination', 'sleeping'],
     link: {
-        url: 'https://www.linkedin.com/in/laxitpant',
-        title: 'View Session'
-    }
-}];
+      url: 'https://www.linkedin.com/in/shekharthathera',
+      title: 'View Profile',
+    },
+  },
 
-// Sort speaking engagements by date, most recent first
-const sortedSpeaking = speaking.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-});
+  // ❌ if you had `{}` here earlier, DELETE it or make it a valid object
+];
+
+// Keep only talks that actually have a valid link/url
+const validSpeaking = speaking.filter(
+  (talk) => talk.link && typeof talk.link.url === 'string'
+);
+
+// Sort by most recent date
+const sortedSpeaking = [...validSpeaking].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
 ---
 
-<div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {sortedSpeaking.map(talk =>
-            <div class="flex flex-col justify-center items-start border border-gray-700 rounded-lg p-4 bg-black">
-                <h3 class="text-xl font-semibold text-white mb-2">
-                    {talk.name}
-                </h3>
+<div class="terminal-speaking max-w-4xl mx-auto mt-8">
 
-                <p class="text-gray-400 mb-2">
-                    {talk.description}
-                </p>
-
-                <p class="text-primary text-sm mb-3">
-                    {talk.date}
-                </p>
-
-                <div class="flex flex-wrap gap-2 mb-4">
-                    {talk.tags?.map(tag => (
-                        <span class="text-primary text-sm">#{tag}</span>
-                    ))}
-                </div>
-
-                <a
-                    href={talk.link.url}
-                    title={talk.link.title || talk.name}
-                    target="_blank"
-                    class="
-                        w-full px-4 py-2.5 mt-4 text-center
-                        border border-gray-600 rounded-lg
-                        hover:text-primary
-                        hover:border-primary
-                    ">
-                    View on LinkedIn
-                </a>
-            </div>
-        )}
+  <!-- Terminal header -->
+  <div class="terminal-speaking-header">
+    <div class="dots">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
     </div>
+    <span class="terminal-title">shekhar@portfolio: ~/logs/speaking.log</span>
+  </div>
+
+  <!-- Terminal body -->
+  <div class="terminal-speaking-body font-mono text-sm text-gray-200">
+    <p class="text-green-400 mb-4">
+      shekhar@portfolio:~$ <span class="text-white">cat speaking.log</span>
+    </p>
+
+    <div class="space-y-6">
+      {sortedSpeaking.map((talk) => (
+        <div
+          class="border-l border-gray-700 pl-4"
+          key={talk.name + talk.date}
+        >
+          <p class="text-xs text-gray-500 mb-1">
+            # {talk.date}
+          </p>
+
+          <p class="text-base text-cyan-300 font-semibold">
+            {talk.name}
+          </p>
+
+          <p class="text-gray-400 mt-1">
+            {talk.description}
+          </p>
+
+          {talk.tags && talk.tags.length > 0 && (
+            <p class="mt-2 text-xs text-gray-500">
+              tags:{' '}
+              {talk.tags.map((tag, idx) => (
+                <span key={tag}>
+                  <span class="text-emerald-400">#{tag}</span>
+                  {idx < talk.tags!.length - 1 ? ' · ' : ''}
+                </span>
+              ))}
+            </p>
+          )}
+
+          <p class="mt-2">
+            ↳{' '}
+            <a
+              href={talk.link?.url || '#'}
+              title={talk.link?.title || talk.name}
+              target="_blank"
+              rel="noreferrer"
+              class="text-green-400 underline hover:text-green-300"
+            >
+              {talk.link?.title || 'Open link'}
+            </a>
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Terminal footer -->
+  <div class="terminal-speaking-footer">
+    <span>shekhar@portfolio</span>
+    <span class="dim">
+      :: log=speaking.log :: entries={sortedSpeaking.length}
+    </span>
+  </div>
 </div>
+
+<style is:global>
+.terminal-speaking {
+  background: #020617;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+/* Header */
+.terminal-speaking-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  background: #020617;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #e5e7eb;
+}
+
+.terminal-speaking-header .dots {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.terminal-speaking-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.terminal-speaking-header .dot.red {
+  background: #ef4444;
+}
+.terminal-speaking-header .dot.yellow {
+  background: #eab308;
+}
+.terminal-speaking-header .dot.green {
+  background: #22c55e;
+}
+
+.terminal-speaking-header .terminal-title {
+  opacity: 0.8;
+}
+
+/* Body */
+.terminal-speaking-body {
+  padding: 1.1rem 1.25rem 1.3rem;
+  background: radial-gradient(circle at top left, #020617, #020617);
+}
+
+/* Footer */
+.terminal-speaking-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  background: #020617;
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.terminal-speaking-footer .dim {
+  opacity: 0.7;
+}
+</style>
