@@ -6,9 +6,7 @@ import Contact from '../components/Contact.astro';
 
 import ContentLink from '../components/ContentLink.astro';
 import ContentCode from '../components/ContentAbout.astro';
-import ContentProjects from '../components/ContentProjects.astro';
-import ContentPodcasts from '../components/ContentPodcasts.astro';
-import ContentSpeaking from '../components/ContentSpeaking.astro';
+import ContentTools from '../components/ContentTools.astro';
 import Experience from '../components/Experience.astro';
 ---
 
@@ -58,20 +56,6 @@ import Experience from '../components/Experience.astro';
                         class="tab-radio"
                     />
 
-                    <input
-                        type="radio"
-                        id="tab4"
-                        name="tabs"
-                        class="tab-radio"
-                    />
-
-                    <input
-                        type="radio"
-                        id="tab5"
-                        name="tabs"
-                        class="tab-radio"
-                    />
-
                     <!-- Start: Tab bar -->
                     <div class="flex bg-black border-b border-gray-600 sticky top-0 z-10">
 
@@ -82,21 +66,11 @@ import Experience from '../components/Experience.astro';
 
                         <ContentLink
                             contentId="tab2"
-                            contentName="blogs.md"
+                            contentName="tools.md"
                         />
 
                         <ContentLink
                             contentId="tab3"
-                            contentName="podcasts.md"
-                        />
-
-                        <ContentLink
-                            contentId="tab4"
-                            contentName="speaking.md"
-                        />
-
-                        <ContentLink
-                            contentId="tab5"
                             contentName="experience.md"
                         />
                     </div>
@@ -111,22 +85,13 @@ import Experience from '../components/Experience.astro';
                         </div>
                         <!-- End: About content -->
 
-                        <!-- Start: Projects content -->
+                        <!-- Start: Tools content -->
                         <div id="content2" class="tab-content">
-                            <ContentProjects />
+                            <ContentTools />
                         </div>
-                        <!-- End: Projects content -->
+                        <!-- End: Tools content -->
 
-                        <!-- Start: Podcasts content -->
-                        <div id="content3" class="tab-content">
-                            <ContentPodcasts />
-                        </div>
-                        <!-- End: Podcasts content -->
-                        <div id="content4" class="tab-content">
-                            <ContentSpeaking />
-                        </div>
-                        <!-- End: Speaking content -->
-                         <div id="content5" class="tab-content">
+                         <div id="content3" class="tab-content">
                             <Experience />
                         </div>
                     </div>
@@ -189,12 +154,6 @@ import Experience from '../components/Experience.astro';
 
     #tab3:checked ~ .flex .tab-link:nth-child(3) {
         @apply border-b-2 border-b-primary;
-    }
-    #tab4:checked ~ * #content4 {
-        @apply block opacity-100;
-    }
-    #tab5:checked ~ * #content5 {
-        @apply block opacity-100;
     }
 
 </style>
